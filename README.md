@@ -11,6 +11,6 @@ The linear combination of the two LSFRs is done with an XOR, and the resulting p
 The 15 outputs go to an analog sum network consisting of N equal resistors of 800 Ohms. The output impedance results in R/N = 800 /16 = 50 Ohms.
 The generated signal oscillates from 0 to 3.3 V. A capacitive high-pass filter is made with a parallel of 10uF / 0.1uF / 10nF / 1nF / 100pF the output will range at +-1.65Vp.
 
-
+https://sdr-prototypes.blogspot.com/2023/05/wgn240-another-gaussian-white-noise.html
 
 

@@ -26,7 +26,7 @@ module lfsr_noise (
 	
 	lfsr_f2 #(.MSB(21),.TAP2(19),.INIT('h1A5555))   lsf0(sclk, o0);
 	lfsr_f2 #(.MSB(33),.TAP2(20),.INIT('h2E7520)) 	lsf1(sclk, o1); 
-   lfsr_f2 #(.MSB(31),.TAP2(28),.INIT('h7520))   	lsf2(sclk, o2);	
+	lfsr_f2 #(.MSB(31),.TAP2(28),.INIT('h7520))   	lsf2(sclk, o2);	
 	lfsr_f2 #(.MSB(29),.TAP2(27),.INIT('h15A5A))  	lsf3(sclk, o3);
 	lfsr_f2 #(.MSB(28),.TAP2(25),.INIT('h334441)) 	lsf4(sclk, o4);
 	lfsr_f2 #(.MSB(25),.TAP2(22),.INIT('h0A55A))  	lsf5(sclk, o5);	
@@ -35,7 +35,7 @@ module lfsr_noise (
 	
 	always @ (posedge sclk) begin
 	
-	   dac[0] = o1[0]^o2[1];
+		dac[0] = o1[0]^o2[1];
 		dac[1] = o2[0]~^o3[1];
 		dac[2] = o3[0]^o4[1];
 		dac[3] = o4[0]^o5[1];

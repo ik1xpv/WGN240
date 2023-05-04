@@ -33,7 +33,7 @@ end
 
 initial
 begin
- output_file = $fopen("noise_distribution.txt","w");
+	output_file = $fopen("noise_distribution.txt","w");
 end
 
 always
@@ -54,11 +54,11 @@ if (clk_sig == 1)
 	nclks_sig = nclks_sig + 1;
 	if (nclks_sig > nsteps) 
 		begin
-		for (i=0; i< 17;i=i+1) begin
-		 $fdisplay(output_file,"%3d  %10d ",i ,prob[i]);
-		 end
-		 $fclose(output_file);
-		 $stop; 
+			for (i=0; i< 17;i=i+1) begin
+				$fdisplay(output_file,"%3d  %10d ",i ,prob[i]);
+			end
+			$fclose(output_file);
+			$stop; 
 		end
 	end
 end
